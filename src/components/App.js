@@ -34,6 +34,9 @@ class App extends React.Component {
     if (this.state.filters.type !== 'all') {
       root += `?type=${this.state.filters.type}`
     }
+    fetch(root)
+    .then(res => res.json())
+    .then(data => this.setState({data}))
   }
   render() {
     return (
