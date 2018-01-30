@@ -15,7 +15,7 @@ class Pet extends React.Component {
         <div className="content">
           <a className="header">Pet name (gender: ♂ or ♀)</a>
           <div className="meta">
-            <span className="date">Pet type</span>
+            <span className="date">Pet type {this.props.pet.type}</span>
           </div>
           <div className="description">
             <p>Age: {this.props.pet.age}</p>
