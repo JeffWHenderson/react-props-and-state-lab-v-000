@@ -5,6 +5,10 @@ class Filters extends React.Component {
     super(props);
   }
 
+  handleChangeType = event => {
+    return this.props.onChangeType(event.target.value)
+  }
+
   render() {
     return (
       <div className="ui form">
