@@ -33,7 +33,7 @@ class App extends React.Component {
     let root = "/api/pets"
     if (this.state.filters.type !== 'all') {
       root += `?type=${this.state.filters.type}`
-    })
+    }
   }
   render() {
     return (
