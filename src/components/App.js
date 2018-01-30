@@ -16,6 +16,9 @@ class App extends React.Component {
     };
   }
 
+  onAdoptPet = pet => {
+    this.setState ({adoptedPets: [...this.state.adoptedPets, pet]})
+  }
   render() {
     return (
       <div className="ui container">
