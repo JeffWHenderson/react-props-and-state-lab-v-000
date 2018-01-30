@@ -21,7 +21,7 @@ class App extends React.Component {
   }
 
   onFilterChange = type => {
-    this.State ({
+    this.setState ({
       filters: {
         ...this.state.filters,
           type: type
