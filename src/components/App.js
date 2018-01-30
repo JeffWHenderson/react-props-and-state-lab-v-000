@@ -28,6 +28,13 @@ class App extends React.Component {
       }
     })
   }
+
+  onFetchPets = event => {
+    let root = "/api/pets"
+    if (this.state.filters.type !== 'all' {
+      root += `?type=${this.state.filters.type}`
+    })
+  }
   render() {
     return (
       <div className="ui container">
