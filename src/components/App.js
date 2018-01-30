@@ -19,6 +19,15 @@ class App extends React.Component {
   onAdoptPet = pet => {
     this.setState ({adoptedPets: [...this.state.adoptedPets, pet]})
   }
+
+  onFilterChange = type => {
+    this.State ({
+      filters: {
+        ...this.state.filters,
+          type: type
+      }
+    })
+  }
   render() {
     return (
       <div className="ui container">
