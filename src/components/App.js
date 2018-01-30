@@ -4,8 +4,8 @@ import Filters from './Filters';
 import PetBrowser from './PetBrowser';
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       pets: [],
