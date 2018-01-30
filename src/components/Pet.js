@@ -8,6 +8,7 @@ class Pet extends React.Component {
   handleAdopt = e => {
     return this.props.onAdoptPet(this.props.pet.id)
   }
+  
   render() {
     return (
       <div className="card">
@@ -22,8 +23,11 @@ class Pet extends React.Component {
           </div>
         </div>
         <div className="extra content">
+        {!this.props.isAdopted ?
           <button className="ui primary button">Adopt pet</button>
+          :
           <button className="ui disabled button">Already adopted</button>
+        }
         </div>
       </div>
     );
