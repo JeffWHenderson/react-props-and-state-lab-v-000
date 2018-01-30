@@ -38,6 +38,7 @@ class App extends React.Component {
     .then(res => res.json())
     .then(data => this.setState({data}))
   }
+
   render() {
     return (
       <div className="ui container">
@@ -47,10 +48,10 @@ class App extends React.Component {
         <div className="ui container">
           <div className="ui grid">
             <div className="four wide column">
-              <Filters />
+              <Filters onFindPetsClick= {this.onFetchPets} onChangeType= {this.onFilterChange} filters= {this.state.filters} />
             </div>
             <div className="twelve wide column">
-              <PetBrowser />
+              <PetBrowser adoptedPets= {this.state.adoptedPets} onAdoptPet= {this.onAdoptPet} pets= {this.state.pets} />
             </div>
           </div>
         </div>
